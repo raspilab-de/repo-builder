@@ -33,12 +33,11 @@ Optional steht eine Docker-Umgebung zur Verfügung, die das Repo lokal per HTTP-
 Erzeugt das APT-Repository unter `WEBROOT`:
 
 1. Leert `dists/<DIST>` und `pool/<COMPONENT>`
-2. Entfernt alte `.deb` (>14 Tage)
-3. Verlinkt aktuelle `.deb`-Pakete in `pool/main`
-4. Ermittelt vorhandene Architekturen aus Dateinamen
-5. Erzeugt pro Architektur einen eigenen Index im `dists/<DIST>/<COMPONENT>/binary-<arch>`
-6. Komprimiert die Indizes (gz, bz2, xz, lzma)
-7. Generiert die zentrale `Release`-Datei
+2. Verlinkt aktuelle `.deb`-Pakete in `pool/main`
+3. Ermittelt vorhandene Architekturen aus Dateinamen
+4. Erzeugt pro Architektur einen eigenen Index im `dists/<DIST>/<COMPONENT>/binary-<arch>`
+5. Komprimiert die Indizes (gz, bz2, xz, lzma)
+6. Generiert die zentrale `Release`-Datei
 
 Konfiguration über Variablen am Skriptanfang:
 
