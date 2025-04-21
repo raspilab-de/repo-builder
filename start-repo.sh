@@ -3,11 +3,6 @@ set -e
 
 REPO_DIR=/repo
 REBUILD_DELAY=20
-DEB_MAX_AGE_DAYS=14
-
-#  Alte .deb-Dateien bereinigen
-echo "Entferne veraltete Pakete (älter als $DEB_MAX_AGE_DAYS Tage)..."
-find "$REPO_DIR" -type f -name '*.deb' -mtime +$DEB_MAX_AGE_DAYS -exec rm -v {} \;
 
 # Erstinitialisierung
 /usr/local/bin/generate_deb_repo.sh
